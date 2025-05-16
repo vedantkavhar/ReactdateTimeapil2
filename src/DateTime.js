@@ -37,17 +37,20 @@ const DateTime = () => {
     },1000); 
   },[]);
   return (
-    <div style={{ fontFamily: 'monospace', padding: '20px' }}>
-      <h2>Current Date and Time</h2>
+    <div className='container' style={{ fontFamily: 'monospace', padding: '20px' }}>
+      <div className='container2'>
 
-      { error && 
-      <p style={{ color: 'red' }}>Error: {error}</p>
+        <h2>Current Date and Time</h2>
+
+        { error && 
+        <p style={{ color: 'red' }}>Error: {error}</p>
       }
 
-      <p><strong>📍 Local (India) Time:</strong> {localTime || 'Loading...'}</p>
-      <p><strong>🌍 UTC Time:</strong> {utcTime || 'Loading...'}</p>
-      <p><strong>🇯🇵 Tokyo Time:</strong> {tokyoTime || 'Loading...'}</p>
+        <p><strong>📍 Local (India) Time:</strong> {localTime || 'Loading...'}</p>
+        <p><strong>🌍 UTC Time:</strong> {utcTime || 'Loading...'}</p>
+        <p><strong>🇯🇵 Tokyo Time:</strong> {tokyoTime || 'Loading...'}</p>
 
+    </div>
      
     </div>
   );
